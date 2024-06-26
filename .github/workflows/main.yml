@@ -1,6 +1,7 @@
 name: Open URLs with Python
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 * * * *'  # This will run the workflow every hour. Adjust the schedule as needed.
 
