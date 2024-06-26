@@ -1,7 +1,7 @@
 name: Open URLs with Python
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # Allows manual triggering of the workflow
   schedule:
     - cron: '0 * * * *'  # This will run the workflow every hour. Adjust the schedule as needed.
 
@@ -21,6 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
+          pip install requests
 
       - name: Run Python script
         run: python open_urls.py
